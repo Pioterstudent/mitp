@@ -37,15 +37,27 @@ long pracownik::podaj_id(void) {
   return (ident_prac); 
 }  
 int main(void) {  
-    pracownik informatyk;  
-    if (informatyk.wprowadz("Jan Kowalski", 101101, 4000) == 0){         
+    pracownik informatyk, szef;  
+    if (informatyk.wprowadz("Jan Kowalski", 101101, 5000) == 0){         
       cout << "Wartosci przypisane skladowym dla pracownika:" << endl;            
       informatyk.inf_o_prac();        
       }   
-    if (informatyk.zmien_pensje(5000.00) == 0) {         
+    if (informatyk.zmien_pensje(9000) == 0) {         
       cout << "---------------- \nNowa pensja pracownika" << endl;        
       informatyk.inf_o_prac();         
     }     
+    else{         
+      cout << "Nieporawne zarobki!" << endl;
+    }
+      
+      if (szef.wprowadz("Tomasz Harko", 101006, 16000) == 0){         
+      cout << "Wartosci przypisane skladowym dla pracownika:" << endl;            
+      szef.inf_o_prac();        
+      }   
+    if (szef.zmien_pensje(17000) == 0) {         
+      cout << "---------------- \nNowa pensja pracownika" << endl;        
+      szef.inf_o_prac();         
+    }     
     else         
-      cout << "Nieporawne zarobki!" << endl;  
+      cout << "Nieporawne zarobki!" << endl;
 } 
