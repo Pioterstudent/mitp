@@ -1,0 +1,23 @@
+#include <iostream>
+
+class Circle{
+public:
+    Circle(float);
+    float radius_;
+
+};
+
+Circle::Circle(float promien){
+    radius_=promien;
+}
+
+
+
+int main(){
+
+Circle opona(60);
+Circle dentka(45);
+Circle Kolo(70);
+
+
+}
