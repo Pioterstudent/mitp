@@ -1,0 +1,31 @@
+#include <iostream>
+
+class Circle{
+public:
+    float* radius_;
+    Circle(float radius){
+    radius_ = new float radius;
+    }
+    void info();
+
+    ~Circle{
+        cout<<"użyto destruktora"<<endl;
+    }
+
+};
+
+Circle::Circle(float promien){
+        radius_=promien;
+}
+
+void Circle::info(){
+    cout<<"promien to:"<<radius_<<endl;
+}
+
+int main(){
+
+Circle kolo(7);
+kolo.info();
+
+
+}
