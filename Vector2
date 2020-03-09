@@ -1,0 +1,72 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+class Vector {
+public:
+
+    double x, y, z;
+    void wart();
+    Vector(double);
+    Vector(double, double);
+    Vector(double, double, double);
+    int dimension_;
+private:
+    double data_[3] = {0, 0, 0};
+};
+
+void Vector::wart() {
+    if (dimension_==1){
+    cout << "wspolrzedne x:"<< data_[0]<<endl;
+    }if (dimension_==2){
+    cout << "wspolrzedne x:"<< data_[0]<<endl;
+    cout << "wspoółrzedna y:"<< data_[1]<<endl;
+    }if (dimension_==3){
+    cout << "wspolrzedne x:"<< data_[0]<<endl;
+    cout << "wspoółrzedna y:"<< data_[1]<<endl;
+    cout << "wspołrzenda z:"<< data_[2]<<endl;
+    }
+
+}
+
+
+
+Vector::Vector(double x)
+{
+    cout << "\n Tworzenie obiektu klasy Vector w przestrzeni R1 :" << endl;
+    dimension_ = 1;
+    data_[0] = x;
+}
+Vector::Vector(double x, double y){
+    cout << "\n Tworzenie obiektu klasy Vector w przestrzeni R2 :" << endl;
+    dimension_=2;
+    data_[0]= x;
+    data_[1]=y;
+
+    
+}
+Vector::Vector(double x, double y, double z) {
+    cout << "\n Tworzenie obiektu klasy Vector w przestrzeni R3 :" << endl;
+    dimension_ = 3;
+    data_[0] = x;
+    data_[1] = y;
+    data_[2] = z;
+}
+
+
+
+
+
+int main() {
+    Vector r1(12.0); // R1
+    cout << "Obiekt klasy Vector o wymiarze:" << r1.dimension_ << endl;
+    r1.wart();
+
+    Vector r2(2, 3);
+    cout << "Obiekt klasy Vector o wymiarze:" << r2.dimension_ << endl;
+    r2.wart();
+
+    Vector r3(1, 5, 6);
+    cout << "Obiekt klasy Vector o wymiarze:" << r3.dimension_ << endl;
+    r3.wart();
+}
