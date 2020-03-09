@@ -16,7 +16,9 @@ private:
 };
 
 void Vector::wart() {
-    cout << "wspolrzedne x:"<< *x <<endl;
+    cout << "wspolrzedne x:"<< data_[0]<<endl;
+    cout << "wspoółrzedna y:"<< data_[1]<<endl;
+    cout << "wspołrzenda z:"<< data_[2]<<endl;
 }
 
 
@@ -32,12 +34,17 @@ Vector::Vector(double x)
 Vector::Vector(double x, double y){
     cout << "\n Tworzenie obiektu klasy Vector w przestrzeni R2 :" << endl;
     dimension_=2;
-    data_[1]= x,y;
+    data_[0]= x;
+    data_[1]=y;
+
+    
 }
 Vector::Vector(double x, double y, double z) {
     cout << "\n Tworzenie obiektu klasy Vector w przestrzeni R3 :" << endl;
     dimension_ = 3;
-    data_[2] = x, y, z;
+    data_[0] = x;
+    data_[1] = y;
+    data_[2] = z;
 }
 
 
