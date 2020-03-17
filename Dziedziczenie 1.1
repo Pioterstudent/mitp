@@ -11,7 +11,6 @@ private:
 class starosta : public student{
 public:
     void printOpis();
-    starosta();
     string Opis_ = "starosta grupy";
 };
 
@@ -24,10 +23,6 @@ void student::printOpis(){
 
     cout << "Opis: " << Opis_ << endl;
 }
-starosta::starosta(){
-    cout << "Tworzenie obiektu klasy student o nazwie: " << Opis_ << endl;
-}
-
 
 void starosta::printOpis(){
 
@@ -37,6 +32,6 @@ void starosta::printOpis(){
 int main(){
     student stud;
     stud.printOpis();
-    starosta Kuba;
-    Kuba.printOpis();
+    starosta soltys;
+    soltys.printOpis();
 }
