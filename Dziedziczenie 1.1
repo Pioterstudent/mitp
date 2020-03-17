@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
+
 class student{
 public:
+
     void printOpis();
     student();
-private:
     string Opis_ = "student grupy";
 };
 
 class starosta : public student{
 public:
-    void printOpis();
     string Opis_ = "starosta grupy";
 };
 
@@ -24,14 +24,13 @@ void student::printOpis(){
     cout << "Opis: " << Opis_ << endl;
 }
 
-void starosta::printOpis(){
 
-    cout << "Opis: " << Opis_ << endl;
-}
 
 int main(){
     student stud;
     stud.printOpis();
     starosta soltys;
     soltys.printOpis();
+    cout << soltys.Opis_;
+
 }
