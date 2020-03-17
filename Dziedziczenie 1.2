@@ -2,17 +2,15 @@
 using namespace std;
 class student{
 public:
-    void printOpis();
     student();
-private:
+    void printOpis();
     string Opis_ = "student grupy";
 };
 
-class starosta:student{
+class starosta :public student{
 public:
-    void printOpis();
-    starosta();
     string Opis_ = "starosta grupy";
+    void printOpis();
 };
 
 student::student(){
@@ -24,9 +22,7 @@ void student::printOpis(){
 
     cout << "Opis: " << Opis_ << endl;
 }
-starosta::starosta(){
-    cout << "Tworzenie obiektu klasy student o nazwie: " << Opis_ << endl;
-}
+
 
 
 void starosta::printOpis(){
